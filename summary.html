@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="./output (2).css">
+</head>
+<body >
+    <div class="flex justify-center items-center flex-col mt-15 " >
+        <img src="./summarySvg.svg" alt="summarySvg" class="h-12 w-12" ><h2 class="font-bold text-2xl text-center" >Summary</h2>
+        <div class="max-w-200 mt-5 min-h-100 bg-blue-200 rounded-md border border-dashed border-black">
+            <p id="summaryText" class="mx-5 font-sans text-base leading-relaxed " ></p>
+        </div>
+
+   </div>
+   <script>
+    const summaryText = document.getElementById("summaryText");
+    const summary = localStorage.getItem("summary");
+    summaryText.textContent = summary || "no summary available";
+   </script> 
+</body>
+</html>
